@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Misty Scripts</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>Misty Scripts</h1>
+		<div id="connect-to-robot">
+			<h3>Connect to Robot: </h3>
+			<input type="text" id="ip-address" placeholder="IP Address" required />
+			<button type="submit" id="connect">Connect</button>
+		</div>
+		<div class="catalog-container">
+			<h3>Script Library: </h3>
+			<table class="catalog">
+				<col width="15%">
+				<col width="50%">
+				<col width="4%">
+				<col width="2%">
+				<!-- <tr>
+					<th>Name</th>
+					<th>Description</th>
+					<th></th>
+					<th></th>
+				</tr>
+				<tr>
+					<td>Find a Face - Sing a Song</td>
+					<td>Misty will turn in a circle and scan for faces. If she sees a face, she will sing a song.</td>
+					<td>
+						<button type="button" class="run">Run</button>
+					</td>
+					<td>
+						<button type="button" class="delete">X</button>
+					</td>
+				</tr> -->
+			</table>
+		</div>
+		<div class="manage-scripts">
+			<h3>Create A Script: </h3>
+			<form class="newScript" action="index.html" method="post">
+				<input type="text" id="newScriptName" placeholder="Script name">
+				<h5>Description: </h5>
+				<textarea id="description" placeholder="Script description."></textarea>
+			</form>
+			<table class="newScriptCommands">
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+			<table id="commands">
+				<thead>
+					<tr>
+						<td colspan="11" class="table-title"><h3>Commands</h3></td>
+					</tr>
+				</thead>
+				<tr>
+					<th>Name</th>
+					<th>Endpoint</th>
+					<th>Callback</th>
+					<th>Arg1</th>
+					<th>Arg2</th>
+					<th>Arg3</th>
+					<th>Arg4</th>
+					<th>Arg5</th>
+					<th>Arg6</th>				
+				</tr>
+				<tr>
+					<td>DriveTime</td>
+					<td>AngularVelocity</td>
+					<td>LinearVelocity</td>
+					<td>TimeMs</td>
+					<td></td>
+					<td>"drive/time"</td>
+					<td>null</td>
+				</tr>
+			</table>
+			<div class="button-container">
+				<button type="button" id="create">Create</button>
+			</div>
+		</div>
+		<script src="../jquery-3.2.1.min.js"></script>
+		<script src="../lightClient.js"></script>
+		<script src="../lightSocket.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
